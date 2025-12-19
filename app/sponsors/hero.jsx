@@ -1,7 +1,6 @@
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-gray-900 to-black">
-      
       {/* Impetus watermark */}
       <div className="absolute inset-0 bg-[url('/impetus.png')] bg-center bg-no-repeat bg-contain opacity-[0.04]" />
 
@@ -11,9 +10,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen items-center justify-start px-12 text-white">
         <div className="max-w-2xl">
-          <h1 className="mb-4 text-5xl font-bold">
-            SPONSOR IMPETUS 9.0
-          </h1>
+          <h1 className="mb-4 text-5xl font-bold">SPONSOR IMPETUS 9.0</h1>
 
           <h2 className="mb-3 text-xl font-semibold">
             Partner with Innovation & Shape the Future of Engineering
@@ -26,10 +23,12 @@ export default function Hero() {
           </p>
 
           <a
-            href="#final"
+            href="/pdf/SponsorshipBrochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-lg bg-blue-600 px-6 py-3 transition hover:bg-blue-700"
           >
-            Become a Sponsor
+            View Brochure
           </a>
         </div>
       </div>

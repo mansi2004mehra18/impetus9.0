@@ -46,7 +46,6 @@ export default function PastSponsors() {
   return (
     <section className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
-
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl">
@@ -62,20 +61,20 @@ export default function PastSponsors() {
           {sponsors.map((sponsor, index) => (
             <div
               key={index}
-              className="group flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10"
+              className="group flex h-28 items-center justify-center rounded-2xl
+                 bg-white p-6 shadow-md
+                 transition-all duration-300 ease-out
+                 hover:scale-[1.05] hover:shadow-xl"
             >
               <Image
                 src={sponsor.logo}
                 alt={sponsor.name}
-                width={160}
-                height={80}
-                sizes="(min-width: 1024px) 160px, (min-width: 768px) 140px, 120px"
-                className="object-contain"
+                priority={index < 6}
+                className="h-25 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
