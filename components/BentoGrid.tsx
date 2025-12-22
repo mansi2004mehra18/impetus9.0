@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ArrowUpRight, Calendar, Users, BookOpen, Clock } from 'lucide-react';
 
 export default function BentoGrid() {
@@ -27,10 +28,10 @@ export default function BentoGrid() {
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 h-auto md:h-[800px]">
           
           {/* BOX 1: IIEST SHIBPUR (Tall Vertical - Left) */}
-          <div className="md:col-span-1 md:row-span-3 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6 flex flex-col justify-between">
+          <Link href="/about/aboutIIEST" className="md:col-span-1 md:row-span-3 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6 flex flex-col justify-between">
             {/* IMAGE: Clocktower */}
             <img 
-                src="/clocktower.jpg" 
+                src="/clock-tower.jpg" 
                 alt="IIEST Clocktower"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60"
             />
@@ -49,10 +50,10 @@ export default function BentoGrid() {
                 The 2nd oldest engineering college in India. A 170-year legacy of excellence.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* BOX 2: IMPETUS 9.0 (Wide Hero - Top Right) */}
-          <div className="md:col-span-3 md:row-span-2 relative group overflow-hidden rounded-3xl border border-zinc-800 p-8 flex flex-col justify-end">
+          <Link href="/about/aboutImpetus" className="md:col-span-3 md:row-span-2 relative group overflow-hidden rounded-3xl border border-zinc-800 p-8 flex flex-col justify-end">
              {/* VIDEO BACKGROUND */}
              <video 
                 autoPlay loop muted playsInline 
@@ -77,10 +78,10 @@ export default function BentoGrid() {
                     <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
                 </button>
              </div>
-          </div>
+          </Link>
 
           {/* BOX 3: SME (Square - Bottom Center-Left) */}
-          <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6">
+          <Link href="/about/aboutSME" className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6">
              {/* IMAGE: Group Photo */}
              <img 
                 src="/group-photo.jpg" 
@@ -96,10 +97,10 @@ export default function BentoGrid() {
                    Society of Mechanical Engineers.<br/>The driving force behind the machine.
                 </p>
              </div>
-          </div>
+          </Link>
 
           {/* BOX 4: IAM (Square - Bottom Center-Right) */}
-          <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6 bg-zinc-900/50 hover:bg-zinc-900 transition-colors">
+          <Link href="/about/IAM" className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6 bg-zinc-900/50 hover:bg-zinc-900 transition-colors">
              {/* IMAGE: IAM Photo (Magazine or Event) */}
              <img 
                 src="/iam-photo.jpg" 
@@ -114,7 +115,7 @@ export default function BentoGrid() {
                    "I Am Mechan"<br/>The voice and identity of our department.
                 </p>
              </div>
-          </div>
+          </Link>
 
           {/* BOX 5: SCHEDULE (Square - Bottom Right) */}
           <div className="md:col-span-1 md:row-span-1 relative overflow-hidden rounded-3xl bg-zinc-950 border border-zinc-800 p-6 flex flex-col justify-between group hover:border-green-500/30 transition-colors">
