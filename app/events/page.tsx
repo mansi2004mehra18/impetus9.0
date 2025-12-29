@@ -40,7 +40,7 @@ export default function CascadingEventsPage() {
       {/* --- SCROLL DOWN HINT --- */}
       <motion.div
         style={{ opacity: downOpacity }}
-        className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-zinc-400 text-xs pointer-events-none z-50 mix-blend-difference"
+        className="fixed bottom-6 mb-20 md:mb-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-zinc-400 text-xs pointer-events-none z-50 mix-blend-difference"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
@@ -48,7 +48,7 @@ export default function CascadingEventsPage() {
         >
           <ChevronDown size={24} />
         </motion.div>
-        <span className="uppercase tracking-widest opacity-70">Scroll</span>
+        
       </motion.div>
     </div>
   );

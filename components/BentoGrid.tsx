@@ -6,13 +6,16 @@ export default function BentoGrid() {
    return (
       <section className="bg-black text-white py-20 px-4 md:px-8">
          <div className="max-w-7xl mx-auto">
-            <div className="mb-8 border-b border-zinc-900 pb-6 flex justify-between items-center">
-               <h2 className="text-xs font-black tracking-[0.3em] uppercase text-zinc-500">
-                  Department of Mechanical Engineering
+            <div className="mb-8 border-b border-zinc-800 pb-4">
+               <h2 className="text-sm leading-relaxed md:text-xl">
+                  <span className="font-mono text-xs text-zinc-500 uppercase tracking-wider md:text-sm">IMPETUS 9.0</span>
+                  <span className="mx-2 text-zinc-700 md:mx-3">-</span>
+                  <span className="font-bold text-zinc-100">Annual Technical Fest</span>
+                  <span className="ml-1 text-zinc-500"> organised by </span>
+                  <span className="block font-medium text-zinc-400 sm:inline sm:ml-1.5">
+                     the Department of Mechanical Engineering, IIEST Shibpur
+                  </span>
                </h2>
-               <div className="text-right">
-                  <div className="text-2xl font-black text-white">IMPETUS 9.0</div>
-               </div>
             </div>
             <div className="grid grid-cols-1 grid-rows-21 md:grid-cols-4 md:grid-rows-3 gap-4 h-auto md:h-[800px]">
                <div className="md:col-span-1 md:row-span-3 row-span-8 relative group overflow-hidden rounded-3xl border border-zinc-800 p-6 flex flex-col justify-between">
@@ -81,7 +84,7 @@ export default function BentoGrid() {
                      <h3 className="text-[22px] font-bold leading-tight text-white">
                         Industry Academia Meet
                      </h3>
-                     <p className="text-[17px] md:text-base text-zinc-500 font-medium">
+                     <p className="text-sm md:text-base text-zinc-500 font-medium">
                         Flagship Event Of IMPETUS.
                      </p>
                      <a

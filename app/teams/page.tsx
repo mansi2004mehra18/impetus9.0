@@ -121,7 +121,6 @@ export default function TeamPage() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* 2. Mobile Sticky Header Bar */}
       <div className="md:hidden">
         <AnimatePresence>
@@ -132,7 +131,7 @@ export default function TeamPage() {
               transition={{ delay: 0.2 }}
               // FIXED top-0: Surface touches top of screen
               // pt-20: Pushes text below your navbar circles
-              className="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-md border-b border-zinc-800 pt-20 pb-4"
+              className="fixed top-0 left-0 right-0 z-4 bg-black/90 backdrop-blur-md border-b border-zinc-800 pt-20 pb-4"
             >
               <div className="relative w-full flex justify-center items-center">
                 

@@ -190,7 +190,6 @@ export default function CoordsLog() {
                   required
                 />
               </div>
-
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium text-neutral-400">Secret Passkey</label>
                 <input
