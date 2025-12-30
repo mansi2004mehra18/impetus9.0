@@ -8,8 +8,13 @@ export default function CascadingEventsPage() {
   return (
     <div className="bg-black text-white min-h-screen">
       <style jsx global>{`
-        body::-webkit-scrollbar { display: none; }
-        body { -ms-overflow-style: none; scrollbar-width: none; }
+        body::-webkit-scrollbar {
+          display: none;
+        }
+        body {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
       `}</style>
       <DaySection
         dayTitle={eventsData.day1.title}
@@ -25,20 +30,34 @@ export default function CascadingEventsPage() {
     </div>
   );
 }
-const DaySection = ({ dayTitle, events, isReversed }: { dayTitle: string, events: any[], isReversed: boolean }) => {
+const DaySection = ({
+  dayTitle,
+  events,
+  isReversed,
+}: {
+  dayTitle: string;
+  events: any[];
+  isReversed: boolean;
+}) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
   return (
-    <div ref={container} className="relative min-h-[300vh] mb-20"> {/* min-h ensures we have scroll space */}
+    <div ref={container} className="relative min-h-[300vh] mb-20">
+      {" "}
+      {/* min-h ensures we have scroll space */}
       <div className="sticky top-10 z-20 flex justify-center mb-10 pointer-events-none">
         <span className="bg-white/10 backdrop-blur-md px-4 py-1 rounded-full text-xs font-mono uppercase tracking-widest text-white border border-white/10">
           {dayTitle}
         </span>
       </div>
-      <div className={`flex ${isReversed ? "flex-row-reverse" : "flex-row"} relative`}>
+      <div
+        className={`flex ${
+          isReversed ? "flex-row-reverse" : "flex-row"
+        } relative`}
+      >
         <div className="w-[15%] md:w-[20%] hidden md:flex justify-center relative">
           <div className="h-screen sticky top-0 flex flex-col justify-center">
             <Timeline progress={scrollYProgress} events={events} />
@@ -46,7 +65,7 @@ const DaySection = ({ dayTitle, events, isReversed }: { dayTitle: string, events
         </div>
         <div className="w-full md:w-[80%] px-4 md:px-10">
           {events.map((project, i) => {
-            const targetScale = 1 - ((events.length - i) * 0.05);
+            const targetScale = 1 - (events.length - i) * 0.05;
             return (
               <Card
                 key={i}
@@ -64,7 +83,13 @@ const DaySection = ({ dayTitle, events, isReversed }: { dayTitle: string, events
     </div>
   );
 };
-const Timeline = ({ progress, events }: { progress: MotionValue<number>; events: any[] }) => {
+const Timeline = ({
+  progress,
+  events,
+}: {
+  progress: MotionValue<number>;
+  events: any[];
+}) => {
   return (
     <div className="relative flex flex-col gap-16 border-l border-zinc-800 pl-8">
       <motion.div
@@ -77,22 +102,50 @@ const Timeline = ({ progress, events }: { progress: MotionValue<number>; events:
         const end = start + step;
         const opacity = useTransform(progress, [start, end], [0.3, 1]);
         const scale = useTransform(progress, [start, end], [1, 1.2]);
-        const color = useTransform(progress, [start, end], ["#52525b", "#EAB308"]); // Zinc to Yellow
+        const color = useTransform(
+          progress,
+          [start, end],
+          ["#52525b", "#EAB308"]
+        ); // Zinc to Yellow
         return (
-          <motion.div key={i} style={{ opacity }} className="flex flex-col gap-1">
-            <motion.span style={{ color }} className="text-xs font-mono font-bold uppercase tracking-wider">
+          <motion.div
+            key={i}
+            style={{ opacity }}
+            className="flex flex-col gap-1"
+          >
+            <motion.span
+              style={{ color }}
+              className="text-xs font-mono font-bold uppercase tracking-wider"
+            >
               {event.time}
             </motion.span>
-            <motion.span style={{ scale, originX: 0 }} className="text-sm font-bold uppercase tracking-tight">
+            <motion.span
+              style={{ scale, originX: 0 }}
+              className="text-sm font-bold uppercase tracking-tight"
+            >
               {event.title}
             </motion.span>
           </motion.div>
-        )
+        );
       })}
     </div>
   );
 };
-const Card = ({ i, title, description, src, date, time, color, progress, range, targetScale, total }: any) => {
+const Card = ({
+  i,
+  title,
+  description,
+  src,
+  date,
+  time,
+  color,
+  progress,
+  range,
+  targetScale,
+  total,
+}: any) => {
+  const [open, setOpen] = useState(false);
+
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <div className="h-screen flex items-center justify-center sticky top-0">
@@ -119,9 +172,13 @@ const Card = ({ i, title, description, src, date, time, color, progress, range, 
           <div className="w-full md:w-[45%] p-8 md:p-12 flex flex-col justify-between z-10 relative">
             <div>
               <div className="flex items-center gap-3 text-zinc-500 text-xs font-mono tracking-widest uppercase mb-8">
-                <span className="flex items-center gap-1 text-zinc-400"><Calendar size={12} /> {date}</span>
+                <span className="flex items-center gap-1 text-zinc-400">
+                  <Calendar size={12} /> {date}
+                </span>
                 <span className="w-1 h-1 bg-zinc-700 rounded-full" />
-                <span className="flex items-center gap-1 text-yellow-600"><Clock size={12} /> {time}</span>
+                <span className="flex items-center gap-1 text-yellow-600">
+                  <Clock size={12} /> {time}
+                </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-black uppercase leading-[0.9] text-white mb-6">
                 {title}
@@ -130,12 +187,16 @@ const Card = ({ i, title, description, src, date, time, color, progress, range, 
                 {description}
               </p>
             </div>
-            <button className="w-fit flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-yellow-400 transition-colors">
+            <button
+              onClick={() => setOpen(true)}
+              className="w-fit flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-yellow-400 transition-colors"
+            >
               Register Event <ArrowUpRight size={16} />
             </button>
           </div>
           <div className="relative w-full md:w-[55%] h-full overflow-hidden group">
-            <div className="absolute inset-0 bg-zinc-900" /> {/* Placeholder while loading */}
+            <div className="absolute inset-0 bg-zinc-900" />{" "}
+            {/* Placeholder while loading */}
             <img
               src={src}
               alt={title}
