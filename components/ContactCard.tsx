@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Instagram, Linkedin, Phone } from "lucide-react";
+
 export interface TeamMember {
   name: string;
   post: string;
@@ -11,30 +12,11 @@ export interface TeamMember {
   link?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d56919a1c9b4f8444c8e110da502c754e32f655d
-type Person = {
-  name: string;
-  post: string;
-  phone: string;
-  imgname: string;
-  insta?: string;
-  link?: string;
-};
-
-const ContactCard = ({ person }: { person: Person }) => {
-<<<<<<< HEAD
-=======
 interface ContactCardProps {
   person: TeamMember;
 }
 
 const ContactCard = ({ person }: ContactCardProps) => {
->>>>>>> upstream/master
-=======
->>>>>>> d56919a1c9b4f8444c8e110da502c754e32f655d
   return (
     <div className="group relative w-[240px] bg-zinc-950 border border-zinc-900 overflow-hidden transition-all duration-500 hover:border-white/40">
       
