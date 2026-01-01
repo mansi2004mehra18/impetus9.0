@@ -15,12 +15,12 @@ export default function Navbar() {
 
   // Full list for Desktop
   const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/about/aboutpage" },
     { name: "Events", href: "/events" },
     { name: "Sponsors", href: "/sponsors" },
     { name: "Teams", href: "/teams" },
     { name: "Gallery", href: "/gallery" },
-    { name: "IAM", href: "/iam" },
+    { name: "IAM", href: "/about/IAM" },
   ];
 
   // Filter links for the Mobile Bottom Bar (Home, Events, IAM)

@@ -9,16 +9,25 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@hcaptcha/react-hcaptcha": "^1.17.1",
+    "@itseasy21/react-elastic-carousel": "^1.0.2",
+    "@mui/icons-material": "^7.3.6",
+    "@mui/material": "^7.3.6",
     "bootstrap": "^5.3.8",
-    "framer-motion": "^12.23.25",
+    "framer-motion": "^12.23.26",
     "jspdf": "^3.0.4",
     "lucide-react": "^0.556.0",
-    "next": "16.0.8",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
-    "router": "^2.2.0"
+    "next": "^16.1.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-elastic-carousel": "^0.11.5",
+    "react-intersection-observer": "^10.0.0",
+    "router": "^2.2.0",
+    "styled-components": "^6.1.19",
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -26,7 +35,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.0.8",
+    "eslint-config-next": "^16.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

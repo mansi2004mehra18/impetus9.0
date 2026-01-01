@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { ArrowUpRight } from 'lucide-react';
 import SlideshowCard from './SlideshowCard'; // Make sure the path matches where you saved the file above
 
@@ -65,7 +66,7 @@ export default function BentoGrid() {
                         Society of Mechanical Engineers, IIEST Shibpur
                      </h3>
                      <a
-                        href="/about"
+                        href="/about/aboutpage"
                         className="inline-flex items-center gap-2 mt-4 text-xs font-medium text-orange-400 hover:text-orange-300 transition-colors"
                      >
                         Know more about us
@@ -88,7 +89,7 @@ export default function BentoGrid() {
                         Flagship Event Of IMPETUS.
                      </p>
                      <a
-                        href="/iam"
+                        href="/about/IAM"
                         className="inline-flex items-center gap-2 mt-4 text-xs font-medium text-purple-400 hover:text-purple-300 transition-colors"
                      >
                         Visit IAM Page
@@ -113,4 +114,4 @@ export default function BentoGrid() {
          </div>
       </section>
    );
-}
+  }

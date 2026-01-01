@@ -1,8 +1,10 @@
 export default function Hero() {
   return (
+
       <div className="relative z-10 flex min-h-screen items-center justify-start px-12 text-white">
         <div className="max-w-2xl">
           <h1 className="mb-4 text-5xl font-bold">SPONSOR IMPETUS 9.0</h1>
+
 
           <h2 className="mb-3 text-xl font-semibold">
             Partner with Innovation & Shape the Future of Engineering
@@ -15,6 +17,7 @@ export default function Hero() {
           </p>
 
           <a
+
             href="/pdf/SponsorshipBrochure.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -22,10 +25,7 @@ export default function Hero() {
           >
             View Brochure
           </a>
-        </div>
-        </div>
+</div>
+</div>
   );
-
 }
-
-
